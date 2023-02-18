@@ -1,6 +1,6 @@
 steps:
 # Build the container image
-- name: gcr.io/cloud-builders/docker-nodejs2
+- name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/nimble-hash-374210/nodejs2:$SHORT_SHA', '.']
   id: Building the container image
 # Push the container image to Container Registry
