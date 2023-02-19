@@ -10,6 +10,7 @@ var users = require('./routes/users');
 
 var app = express();
 
+var helmet = require('helmet);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,6 +44,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use(helmet());
 
 module.exports = app;
 
