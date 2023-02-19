@@ -8,6 +8,6 @@ steps:
   args: ['push', 'gcr.io/nimble-hash-374210/nodejs2:$SHORT_SHA']
   id: Pushing the image to registry
 # Deploy container image to Cloud Run
-- name: 'gcr.io/cloud-builders/gcloud1'
+- name: 'gcr.io/cloud-builders/gcloud2'
   args: ['run', 'deploy', 'nimble-hash-374210', '--image', 'gcr.io/nimble-hash-374210/nodejs2:$SHORT_SHA', '--region', 'us-central1', '--platform', 'managed', "--allow-unauthenticated"]
 
