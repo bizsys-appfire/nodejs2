@@ -7,7 +7,6 @@ RUN apk add --update tini
 
 
 #update packages
-RUN apt-get update & apt-get install -y --no-install-recommends dumb-init
 
 #create app directory
 WORKDIR /usr/src/app
