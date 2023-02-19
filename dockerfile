@@ -27,6 +27,7 @@ COPY --chown=node:node . .
 #Install NPM
 RUN npm install --production 
 
+
 #Usermode
 
 USER addi node
